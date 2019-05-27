@@ -1,0 +1,12 @@
+<%= form_with scope: :group, url: groups_path, local: true do |form| %>  <p>
+    <%= form.label :Group %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :Student %><br>
+    <%= collection_select(:group, :student_id, Student.all, :id, :name) %>  </p>
+  <p>
+   <%= form.submit %>
+  </p>
+<% end %>

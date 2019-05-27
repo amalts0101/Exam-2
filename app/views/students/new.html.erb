@@ -1,0 +1,14 @@
+<%= form_with scope: :student, url: students_path, local: true do |form| %>  <p>
+    <%= form.label :Name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :Email %><br>
+    <%= form.text_field :email %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
